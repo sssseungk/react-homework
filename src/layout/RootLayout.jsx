@@ -10,7 +10,7 @@ export default function RootLayout(){
   return (
     <div>
       <HeaderBar/>
-      <Outlet/>
+      {/* <Outlet/> */}
       <MusicList/>
       <FooterBar/>
     </div>
