@@ -1,4 +1,3 @@
-import RootLayout from "./layout/Rootlayout";
 import router from './../routes';
 import { RouterProvider } from 'react-router-dom';
 

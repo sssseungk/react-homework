@@ -1,5 +1,4 @@
 import HeaderBar from './../layout/HeaderBar';
-import FooterBar from './../layout/FooterBar';
 
 
 export default function Like(){
