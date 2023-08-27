@@ -61,17 +61,17 @@ const musics = [
   }
 ];
 
-export default function MusicList(){
+export default function MusicChartList(){
 
   return (
-    <div className="flex justify-around my-10 flex-wrap">
+    <div className="m-10 w-3/5 text-center mx-auto my-0 mt-10">
+      <h1 className="mb-6">Your Chart</h1>
       {musics.map(music => (
         <>
-          <MusicItem music={music} key={music.id} />
+        <MusicChart music={music} key={music.id}/>
         </>
       ))}
     </div>
   )
+
 }
-
-

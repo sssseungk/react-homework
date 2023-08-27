@@ -1,9 +1,11 @@
 import RootLayout from "./layout/Rootlayout";
+import router from './../routes';
+import { RouterProvider } from 'react-router-dom';
 
 function App(){
   return (
     <>
-      <RootLayout />
+      <RouterProvider router={router}/>
     </>
   );
 }
