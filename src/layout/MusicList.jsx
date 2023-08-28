@@ -2,6 +2,7 @@ import MusicItem from "@/components/MusicItem";
 import useFetchData from "@/hooks/useFetchData";
 
 const PB_PRODUCTS_ENDPOINT = `http://127.0.0.1:8090/api/collections/musics/records`;
+
 // const musics = [
 //   {
 //     id: 1,
