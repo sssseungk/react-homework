@@ -4,7 +4,7 @@ import MusicChartList from './../layout/MusicChartList';
 
 
 
-export default function Chart({music}){
+export default function Chart(){
 
   return (
     <div>
