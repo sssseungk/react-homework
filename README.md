@@ -11,22 +11,25 @@
 
 
 ## :mag: 실행 화면
-- 메인페이지 
-![localhost_5173_ (1)](https://github.com/sssseungk/react-homework/assets/72969123/25989243-3408-497c-aaea-6ab8d5d63418)
+![float](https://github.com/sssseungk/react-homework/assets/72969123/fbe61137-7cd4-4411-8e11-2276ae0f46a5)
+
 
 <br/>
 <br/>
 
-- 차트 페이지
-![chart](https://github.com/sssseungk/react-homework/assets/72969123/7edd79b3-031c-4ea8-90a2-f8c0e939fbe8)
+
 
 <br/>
 <br/>
 <br/>
 
 ## :pencil: 구현 기능
-- 배열 생성해서 리스트 렌더링
 - 네비게이션 바에서 차트 클릭시 페이지 이동
+- 메인 페이지의 이미지와 해당 이미지의 상세 페이지 데이터 연동하기
+- 포켓베이스에 데이터 생성해서 불러오기
+  
+![pocketbase](https://github.com/sssseungk/react-homework/assets/72969123/f55d234c-b0f7-4e39-b0d0-f49b6a041a41)
+
 
 
 <br/>
@@ -34,5 +37,5 @@
 <br/>
 
 ## :pencil: 이후 시도할 기능
-- 포켓 베이스 활용해서 데이터 추가, 삭제, 수정, 데이터 연동 기능
-- 메인 페이지에서 음악 클릭하면 페이지 이동
+- 음악 데이터 추가, 삭제, 수정 기능
+- 상세 페이지에서 하트 클릭시 Like 페이지에 해당 앨범 렌더링하기
