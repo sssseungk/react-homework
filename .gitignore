@@ -1,4 +1,6 @@
 # Logs
+
+pocketbase
 logs
 *.log
 npm-debug.log*
