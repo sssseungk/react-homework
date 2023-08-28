@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  pocketbase:
+    specifier: link:pocketbase\pocketbase serve
+    version: link:pocketbase/pocketbase serve
   react:
     specifier: ^18.2.0
     version: 18.2.0
