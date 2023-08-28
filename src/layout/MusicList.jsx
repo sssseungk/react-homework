@@ -1,84 +1,35 @@
-import MusicItem from "@/components/MusicItem";
-import useFetchData from "@/hooks/useFetchData";
+import useMusicList from "@/hooks/useMusicList";
+import { getPbImageURL } from "@/utils/getPbImageUrl";
+import { Link } from "react-router-dom";
 
-const PB_PRODUCTS_ENDPOINT = `http://127.0.0.1:8090/api/collections/musics/records`;
-
-// const musics = [
-//   {
-//     id: 1,
-//     title: '아지랑이',
-//     src: '/images/lucy-ten.jpg',
-//     artist : 'LUCY',
-//     time: '04:15'
-//   },
-//   {
-//     id: 2,
-//     title: 'Brain',
-//     src: '/images/brain.jpg',
-//     artist : '양요섭',
-//     time: '03:28'
-
-//   },
-//   {
-//     id: 3,
-//     title: 'Grace',
-//     src: '/images/Grace.jpg',
-//     artist : 'ADOY',
-//     time: '04:05'
-//   },
-//   {
-//     id: 4,
-//     src: '/images/12.jpg',
-//     title: '결국 아무것도 알 수 없었지만',
-//     artist : 'LUCY',
-//     time: '03:59'
-//   },
-//   {
-//     id: 5,
-//     src: '/images/13.jpg',
-//     title: 'Open Arms',
-//     artist : 'LUCY',
-//     time: '03:11'
-//   },
-//   {
-//     id: 6,
-//     src: '/images/14.jpg',
-//     title: 'Steal The Show',
-//     artist : 'Lauv',
-//     time: '03:59'
-//   },
-//   {
-//     id: 7,
-//     src: '/images/15.jpg',
-//     title: 'Bubble',
-//     artist : 'STAYC',
-//     time: '02:59'
-//   },
-//   {
-//     id: 8,
-//     src: '/images/eta.jpg',
-//     title: 'ETA',
-//     artist : 'NewJeans',
-//     time: '02:31'
-//   }
-// ];
 
 export default function MusicList(){
 
-  const { data } = useFetchData(PB_PRODUCTS_ENDPOINT);
+  const { data:musics } = useMusicList();
 
 
   return (
-    <div className="flex justify-around my-10 flex-wrap">
-      {data &&
-        data.items &&
-        data.items?.map(music => (
-        <>
-          <MusicItem music={music} key={music.id} />
-        </>
-      ))}
-    </div>
+    <ul className="flex justify-around my-10 flex-wrap">
+      {musics &&
+       musics.items?.map((music) => {
+        return (
+          <li key={music.id}>
+            <Link to={`/music/detail/${music.id}`}>
+            <div className="border-solid border-2 w-80 h-90 mb-10 hover:transition-all hover:scale-110">
+              <img src={getPbImageURL(music, 'image')} alt={music.title} className="w-full h-60" />
+              <div className="z-50 bg-white p-1 pl-4">
+                <h1 className="text-sm font-[700] mt-1">{music.title}</h1>
+                <div className="flex items-center my-1">
+                  <img src={getPbImageURL(music, 'profile')} alt=""  className="rounded-full w-10 h-10" />
+                  <h2 className="ml-3 text-sm">{music.artist}</h2>
+                  <span className="text-sm ml-36">{music.time}</span>
+                </div>
+              </div>
+            </div>
+            </Link>
+          </li>
+        )        
+      })}
+    </ul>
   )
 }
-
-
