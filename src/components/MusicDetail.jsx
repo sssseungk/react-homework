@@ -45,7 +45,7 @@ export default function MusicDetail(){
                     <span className="material-symbols-outlined text-gray-600 scale-150">more_horiz</span>
                   </button>
                   <button className="ml-10">
-                    <span class={`material-symbols-outlined scale-150 ${isClicked ? 'text-red-600' : 'text-gray-600'}`} onClick={handleClick}>heart_plus</span>
+                    <span className={`material-symbols-outlined scale-150 ${isClicked ? 'text-red-600' : 'text-gray-600'}`} onClick={handleClick}>heart_plus</span>
                   </button>
                 </div>
                 

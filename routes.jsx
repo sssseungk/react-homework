@@ -1,3 +1,4 @@
+import AddMusic from "@/layout/AddMusic";
 import Chart from "@/pages/Chart";
 import Detail from "@/pages/Detail";
 import Home from "@/pages/Home";
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
       <Route path="chart" element={<Chart/>}/>
       <Route path="like" element={<Like/>}/>
       <Route path="music/detail/:musicId" element={<Detail />} />
+      <Route path="new" element={<AddMusic />} />
     </>
 
   )
