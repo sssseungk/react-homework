@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   pocketbase:
-    specifier: link:pocketbase\pocketbase serve
-    version: link:pocketbase/pocketbase serve
+    specifier: ^0.17.3
+    version: 0.17.3
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1987,6 +1987,10 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
     dev: true
+
+  /pocketbase@0.17.3:
+    resolution: {integrity: sha512-tqtk7kd8K4/5BspCzqf8DcbjS+iCBLFdpC7s/d6hAuxeoqP5MH6llRICm22dldJDFcTa1chuCfyeeKoU5mYaHQ==}
+    dev: false
 
   /postcss-import@15.1.0(postcss@8.4.28):
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
