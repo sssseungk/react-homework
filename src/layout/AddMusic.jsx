@@ -56,11 +56,19 @@ export default function AddMusic(){
     uploadProfileImageRef.current.setAttribute('src', imageUrl);
   };
 
+  const handleResetUpload = (e) => {
+    uploadImageRef.current.src = 'https://as1.ftcdn.net/v2/jpg/03/45/05/92/1000_F_345059232_CPieT8RIWOUk4JqBkkWkIETYAkmz2b75.jpg'
+    uploadProfileImageRef.current.src = 'https://as1.ftcdn.net/v2/jpg/03/45/05/92/1000_F_345059232_CPieT8RIWOUk4JqBkkWkIETYAkmz2b75.jpg'
+  }
+
   return (
     <>
       <HeaderBar/>
       <div className="flex justify-center items-center my-20">
-        <div className="border-8 rounded-lg w-3/5">
+        <div className="border-8 rounded-lg w-3/5 relative">
+          <button type="button" onClick={() => { navigate('/')}} class="hover:bg-slate-600 hover:text-white rounded-xl w-[150px] h-[50px] top-6 bg-slate-300 text-xl  absolute right-8">
+            Prev Page
+          </button>
           <form encType="multipart/form-data" onSubmit={handleRegisterMusic} className="p-10">
             {/* 앨범명 */}
             <div className="flex flex-col mb-10">
@@ -216,8 +224,8 @@ export default function AddMusic(){
             </div>
 
             <div className="flex flex-row-reverse">
-              <button type="submit" className="bg-slate-300 text-xl w-[90px] h-[50px] text-center rounded-xl mr-5 order-2">Add</button>
-              <button type="reset" className="bg-slate-300 text-xl w-[90px] h-[50px] text-center rounded-xl order-1">Cancel</button>
+              <button type="submit" className="bg-slate-300 hover:bg-slate-600 hover:text-white text-xl w-[90px] h-[50px] text-center rounded-xl mr-5 order-2">Add</button>
+              <button type="reset" className="bg-slate-300 hover:bg-slate-600 hover:text-white text-xl w-[90px] h-[50px] text-center rounded-xl order-1" onClick={handleResetUpload}>Cancel</button>
             </div>
           </form>
         </div>
