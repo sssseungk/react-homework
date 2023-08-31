@@ -13,6 +13,9 @@ export default function Nav(){
         <li>
           <NavLink to="/like" className='hover:text-blue-400'>LIKE</NavLink>  
         </li>
+        <li>
+          <NavLink to="/signin" className='hover:text-blue-400'>LOGIN</NavLink>  
+        </li>
       </ul>
     </nav>
   )

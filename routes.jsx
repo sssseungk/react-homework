@@ -1,4 +1,5 @@
 import AddMusic from "@/layout/AddMusic";
+import SignIn from "@/layout/SignIn";
 import Chart from "@/pages/Chart";
 import Detail from "@/pages/Detail";
 import Home from "@/pages/Home";
@@ -6,7 +7,6 @@ import Like from "@/pages/Like";
 import { createBrowserRouter } from "react-router-dom";
 import { createRoutesFromElements } from "react-router-dom";
 import { Route } from "react-router-dom";
-
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +16,7 @@ const router = createBrowserRouter(
       <Route path="like" element={<Like/>}/>
       <Route path="music/detail/:musicId" element={<Detail />} />
       <Route path="new" element={<AddMusic />} />
+      <Route path="/signin" element={<SignIn />} />
     </>
 
   )

@@ -66,7 +66,7 @@ export default function AddMusic(){
       <HeaderBar/>
       <div className="flex justify-center items-center my-20">
         <div className="border-8 rounded-lg w-3/5 relative">
-          <button type="button" onClick={() => { navigate('/')}} class="hover:bg-slate-600 hover:text-white rounded-xl w-[150px] h-[50px] top-6 bg-slate-300 text-xl  absolute right-8">
+          <button type="button" onClick={() => { navigate('/')}} className="hover:bg-slate-600 hover:text-white rounded-xl w-[150px] h-[50px] top-6 bg-slate-300 text-xl  absolute right-8">
             Prev Page
           </button>
           <form encType="multipart/form-data" onSubmit={handleRegisterMusic} className="p-10">
